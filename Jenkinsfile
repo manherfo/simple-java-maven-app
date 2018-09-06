@@ -28,7 +28,7 @@ pipeline {
         }
         stage('email'){
             steps{
-                emailext body: 'hola', recipientProviders: [developers()], subject: 'hola', to: 'mao.11.hf@gmail.com
+                emailext body: 'hola', recipientProviders: [developers()], subject: 'hola', to: 'mao.11.hf@gmail.com'
             }
         }
     }
