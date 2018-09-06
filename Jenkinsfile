@@ -24,7 +24,11 @@ pipeline {
         stage('Deliver') {
             steps {
                 sh 'ls ; ./jenkins/scripts/deliver.sh'
-                emailext body: 'hola', recipientProviders: [developers()], subject: 'hola', to: 'mao.11.hf@gmail.com'
+            }
+        }
+        stage('email'){
+            steps{
+                emailext body: 'hola', recipientProviders: [developers()], subject: 'hola', to: 'mao.11.hf@gmail.com
             }
         }
     }
